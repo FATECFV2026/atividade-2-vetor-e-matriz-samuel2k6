@@ -278,7 +278,7 @@ public class App {
     public static int[] ex04() {
     Scanner sc = new Scanner(System.in);
     int valor = sc.nextInt();
-    return sequenciaCresenteComSoma(valor);
+    return sequenciaCrescenteComSoma(valor);
     }
     
     /**
