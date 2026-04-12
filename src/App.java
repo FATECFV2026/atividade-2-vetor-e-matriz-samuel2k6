@@ -7,13 +7,13 @@ public class App {
         Scanner sc = new Scanner(System.in);
         
         System.out.println("ATIVIDADE ESTRUTURA DE DADOS");
-        System.out.println("Escolha uma ativade");
-        System.out.println("1 - Progressão Geometrica");
+        System.out.println("Escolha uma atividade");
+        System.out.println("1 - Progressao Geometrica");
         System.out.println("2 - Sequencia Decresecente");
         System.out.println("3 - Vetor Dinamico");
         System.out.println("4 - Sequencia Crescente com Soma");
         System.out.println("5 - Matriz com valores Incrementais");
-        System.out.println("6 - Operação entre matrizes");
+        System.out.println("6 - Operacao entre matrizes");
         System.out.println("0 - Sair");
 
         int atividade = lerValor(sc, null, -1, 6);
