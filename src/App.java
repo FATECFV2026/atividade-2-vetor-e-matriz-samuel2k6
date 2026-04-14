@@ -39,7 +39,7 @@ public class App {
 
             case 4:
                 int v4 = lerValor(sc, "Valor inicial:", 0, 0);
-                int[] crescente = sequenciaCrescenteComSoma(v4);
+                int[] crescente = sequenciaCresenteComSoma(v4);
                 System.out.println(Arrays.toString(crescente));
                 System.out.println("Soma: " + calcularSoma(crescente));
                 break;
@@ -172,14 +172,15 @@ public class App {
      * @param valorInicial Valor inicial
      * @return Vetor de 10 elementos com sequencia crescente
      */
-    public static int[] sequenciaCresenteComSoma(int valorInicial) {      
-        int[] vetor = new int[10];
-        vetor[0] = valorInicial;
+    public static int[] sequenciaCresenteComSoma(int valorInicial) {
+    int[] vetor = new int[10];
+    vetor[0] = valorInicial;
 
-        for(int i = 1; i < 10; i++){
-    vetor[i] = vetor[i - 1] + 1;}
-        return vetor;
+    for(int i = 1; i < 10; i++){
+        vetor[i] = vetor[i - 1] + 1;
     }
+    return vetor;
+}
     
     /**
      * Calcula a soma de todos os elementos do vetor
