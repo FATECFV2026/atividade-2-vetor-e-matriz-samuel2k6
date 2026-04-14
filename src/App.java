@@ -172,7 +172,7 @@ public class App {
      * @param valorInicial Valor inicial
      * @return Vetor de 10 elementos com sequencia crescente
      */
-    public static int[] sequenciaCrescenteComSoma(int valorInicial) {      
+    public static int[] sequenciaCresenteComSoma(int valorInicial) {      
         int[] vetor = new int[10];
         vetor[0] = valorInicial;
 
