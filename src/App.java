@@ -7,13 +7,13 @@ public class App {
         Scanner sc = new Scanner(System.in);
         
         System.out.println("ATIVIDADE ESTRUTURA DE DADOS");
-        System.out.println("Escolha uma atividade");
-        System.out.println("1 - Progressao Geometrica");
+        System.out.println("Escolha uma ativade");
+        System.out.println("1 - Progressão Geometrica");
         System.out.println("2 - Sequencia Decresecente");
         System.out.println("3 - Vetor Dinamico");
         System.out.println("4 - Sequencia Crescente com Soma");
         System.out.println("5 - Matriz com valores Incrementais");
-        System.out.println("6 - Operacao entre matrizes");
+        System.out.println("6 - Operação entre matrizes");
         System.out.println("0 - Sair");
 
         int atividade = lerValor(sc, null, -1, 6);
@@ -172,15 +172,14 @@ public class App {
      * @param valorInicial Valor inicial
      * @return Vetor de 10 elementos com sequencia crescente
      */
-    public static int[] sequenciaCresenteComSoma(int valorInicial) {
-    int[] vetor = new int[10];
-    vetor[0] = valorInicial;
+    public static int[] sequenciaCresenteComSoma(int valorInicial) {      
+        int[] vetor = new int[10];
+        vetor[0] = valorInicial;
 
-    for(int i = 1; i < 10; i++){
-        vetor[i] = vetor[i - 1] + 1;
+        for(int i = 1; i < 10; i++){
+    vetor[i] = vetor[i - 1] + 1;}
+        return vetor;
     }
-    return vetor;
-}
     
     /**
      * Calcula a soma de todos os elementos do vetor
@@ -224,7 +223,7 @@ public class App {
         int[][] matrizZ = new int[tamanho][tamanho];
         int[][] matrizSoma = new int[tamanho][tamanho];
 
-        int contador = tamanho + 1;
+        int contador = 1;
 
         for (int i = 0; i < tamanho; i++) {
     for (int j = 0; j < tamanho; j++) {
@@ -303,4 +302,3 @@ public class App {
         return operacaoEntreMatrizes(valor);
     }
 }
-
