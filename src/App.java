@@ -5,73 +5,83 @@ public class App {
     
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
+        int atividade = -1;
         
-        System.out.println("ATIVIDADE ESTRUTURA DE DADOS");
-        System.out.println("Escolha uma ativade");
-        System.out.println("1 - Progressão Geometrica");
-        System.out.println("2 - Sequencia Decresecente");
-        System.out.println("3 - Vetor Dinamico");
-        System.out.println("4 - Sequencia Crescente com Soma");
-        System.out.println("5 - Matriz com valores Incrementais");
-        System.out.println("6 - Operação entre matrizes");
-        System.out.println("0 - Sair");
+        while (atividade != 0) {
+    System.out.println("ATIVIDADE ESTRUTURA DE DADOS");
+    System.out.println("Escolha uma ativade");
+    System.out.println("1 - Progressão Geometrica");
+    System.out.println("2 - Sequencia Decresecente");
+    System.out.println("3 - Vetor Dinamico");
+    System.out.println("4 - Sequencia Crescente com Soma");
+    System.out.println("5 - Matriz com valores Incrementais");
+    System.out.println("6 - Operação entre matrizes");
+    System.out.println("0 - Sair");
 
-        int atividade = lerValor(sc, null, -1, 6);
-
-        switch (atividade) {
-            case 1:
-                int v1 = lerValor(sc, "Valor inicial (<=20):", 0, 20);
-                int[] pg = progressaoGeometrica(v1);
-                System.out.println(Arrays.toString(pg));
-                break;
-            
-            case 2:
-                int v2 = lerValor(sc, "Valor inicial (>1):", 1, 0);
-                int[] dec = sequenciaDecrescente(v2);
-                System.out.println(Arrays.toString(dec));
-                break;
-            
-            case 3:
-                int tamanho = lerValor(sc, "Tamanho do vetor (<=1000):", 0, 1000);
-                int[] vetor = vetorDinamico(tamanho);
-                System.out.println(Arrays.toString(vetor));
-                break;
-
-            case 4:
-                int v4 = lerValor(sc, "Valor inicial:", 0, 0);
-                int[] crescente = sequenciaCresenteComSoma(v4);
-                System.out.println(Arrays.toString(crescente));
-                System.out.println("Soma: " + calcularSoma(crescente));
-                break;
-
-            case 5:
-                int n = lerValor(sc, "Tamanho da matriz:", 0, 0);
-                int[][] matriz = matrizIncrementais(n);
-                exibirMatriz(matriz);
-                break;
-
-            case 6:
-                int t = lerValor(sc, "Tamanho das matrizes:", 0, 0);
-                int[][][] matrizes = operacaoEntreMatrizes(t);
-
-                System.out.println("Matriz N:");
-                exibirMatriz(matrizes[0]);
-
-                System.out.println("Matriz Z:");
-                exibirMatriz(matrizes[1]);
-
-                System.out.println("Matriz Soma:");
-                exibirMatriz(matrizes[2]);
-                break;
-        
-            case 0:
-                System.out.println("encerrando o programa");
-                break;
-            default:
-                break;
-        }
+    if (!sc.hasNextInt()) {
+        sc.next();
+        continue;
     }
-    
+
+
+    atividade = sc.nextInt();
+
+    switch (atividade) {
+        case 1:
+            int v1 = lerValor(sc, "Valor inicial (<=20):", 0, 20);
+            int[] pg = progressaoGeometrica(v1);
+            System.out.println(Arrays.toString(pg));
+            break;
+
+        case 2:
+            int v2 = lerValor(sc, "Valor inicial (>1):", 1, 0);
+            int[] dec = sequenciaDecrescente(v2);
+            System.out.println(Arrays.toString(dec));
+            break;
+
+        case 3:
+            int tamanho = lerValor(sc, "Tamanho do vetor (<=1000):", 0, 1000);
+            int[] vetor = vetorDinamico(tamanho);
+            System.out.println(Arrays.toString(vetor));
+            break;
+
+        case 4:
+            int v4 = lerValor(sc, "Valor inicial:", 0, 0);
+            int[] crescente = sequenciaCresenteComSoma(v4);
+            System.out.println(Arrays.toString(crescente));
+            System.out.println("Soma: " + calcularSoma(crescente));
+            break;
+
+        case 5:
+            int n = lerValor(sc, "Tamanho da matriz:", 0, 0);
+            int[][] matriz = matrizIncrementais(n);
+            exibirMatriz(matriz);
+            break;
+
+        case 6:
+            int t = lerValor(sc, "Tamanho das matrizes:", 0, 0);
+            int[][][] matrizes = operacaoEntreMatrizes(t);
+
+            System.out.println("Matriz N:");
+            exibirMatriz(matrizes[0]);
+
+            System.out.println("Matriz Z:");
+            exibirMatriz(matrizes[1]);
+
+            System.out.println("Matriz Soma:");
+            exibirMatriz(matrizes[2]);
+            break;
+
+        case 0:
+            System.out.println("Encerrando o programa");
+            break;
+
+        default:
+            System.out.println("Opção inválida");
+    }
+}
+}
+               
     /**
      * Metodo auxiliar para ler e validar entrada do usuario
      * @param scanner Scanner para leitura
